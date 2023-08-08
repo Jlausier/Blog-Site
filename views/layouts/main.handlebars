@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developer Blog</title>
+</head>
+<body>
+  <h1>Welcome to the Developer Blog</h1>
+  <ul>
+    {{#each posts}}
+      <li>
+        <h2>{{this.title}}</h2>
+        <p>{{this.contents}}</p>
+        <p>Posted by {{this.user.username}} on {{this.createdAt}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</body>
+</html>

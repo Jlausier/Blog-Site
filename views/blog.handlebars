@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <h2>Your Blog Posts</h2>
+  <ul>
+    {{#each posts}}
+      <li>
+        <h3>{{this.title}}</h3>
+        <p>{{this.contents}}</p>
+        <form action="/dashboard/delete/{{this.id}}" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    {{/each}}
+  </ul>
+  <h2>Create a New Blog Post</h2>
+  <form action="/dashboard/create" method="POST">
+    <label for="title">Title</label>
+    <input type="text" name="title" required>
+    <label for="contents">Contents</label>
+    <textarea name="contents" required></textarea>
+    <button type="submit">Create Post</button>
+  </form>
+</body>
+</html>
