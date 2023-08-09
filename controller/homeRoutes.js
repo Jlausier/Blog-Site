@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
       post.toJSON()
     })
     // hand the plain object to the all view
-    res.render('all', {postData})
+    res.render('main', {postData})
   } catch (error) {
     throw error;
   }
