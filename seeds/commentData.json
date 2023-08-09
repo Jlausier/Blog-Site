@@ -1,0 +1,17 @@
+[
+    {
+      "content": "Javascript is the bane of my existence",
+      "user_id": 1,
+      "blogpost_id": "2"
+    },
+    {
+      "content": "Great Post!",
+      "user_id": 2,
+       "blogpost_id": "3"
+    },
+    {
+      "content": "Best cook ever!!!",
+      "user_id": 3,
+       "blogpost_id": "1"
+    }
+  ]

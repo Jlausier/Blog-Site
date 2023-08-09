@@ -3,18 +3,22 @@
       "id": 1,
       "title": "Getting Started with JavaScript",
       "contents": "JavaScript is a versatile programming language...",
-      "user_id": 123
+      "user_id": 1,
+      "blogpost_id":2
     },
     {
       "id": 2,
       "title": "Exploring the Wonders of Machine Learning",
       "contents": "Machine learning is a subset of artificial intelligence...",
-      "user_id": 456
+      "user_id": 2,
+      "blogpost_id": 3
     },
     {
       "id": 3,
       "title": "Cooking Adventures: A Journey Through Exotic Cuisines",
       "contents": "Embark on a culinary journey to discover the flavors...",
-      "user_id": 789
+      "user_id": 3,
+      "blogpost_id": 1
+
     }
   ]

@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
-const { User } = require('../models'); // Import your User model
+const { User } = require('../../models'); // Import your User model
+const router = require('express').Router();
 
 
 
@@ -54,3 +55,5 @@ exports.logout = (req, res) => {
     res.redirect('/');
   });
 };
+
+module.exports = router

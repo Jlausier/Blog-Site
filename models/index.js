@@ -1,4 +1,8 @@
-  // Define associations
+const User = require('./User');
+const BlogPost= require('./BlogPost');
+const Comment = require('./Comment');
+ 
+ // Define associations
   User.hasMany(BlogPost, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE',
@@ -28,3 +32,5 @@
     foreignKey: 'blogpost_id',
     onDelete: 'CASCADE',
   });
+
+  module.exports = { User, BlogPost, Comment };
