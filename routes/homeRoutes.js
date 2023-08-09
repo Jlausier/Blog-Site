@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { getAllPosts } = require('../controllers/postController');
+const { getAllPosts } = require('../controller/postController');
 
 router.get('/', async (req, res) => {
   try {

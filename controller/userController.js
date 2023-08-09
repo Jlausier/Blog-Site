@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt');
 const { User } = require('../models'); // Import your User model
 
+
+
 exports.signup = async (req, res) => {
   try {
     const { username, password } = req.body;

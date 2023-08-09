@@ -1,5 +1,9 @@
 const express = require('express');
-const userRoutes = require('./routes/userRoutes');
+const routes = require('./controller');
+
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -8,16 +12,20 @@ app.use(express.urlencoded({ extended: true }));
 
 const session = require('express-session');
 
-app.use(
-  session({
-    secret: 'your-secret-key', // Change this to a strong secret
-    resave: false,
-    saveUninitialized: true,
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
   })
-);
-//route for login and logout
-app.use('/users', userRoutes);
+};
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.use(session(sess));
+//route for login and logout
+app.use(routes);
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });

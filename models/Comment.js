@@ -35,15 +35,7 @@ Comment.init(
     modelName: 'comment',
   }
 );
-Comment.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE',
-  });
-  
-  Comment.belongsTo(BlogPost, {
-    foreignKey: 'blogpost_id',
-    onDelete: 'CASCADE',
-  });
+
 module.exports = Comment;
 
 

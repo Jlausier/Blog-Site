@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { getDashboard, createPost, deletePost } = require('../controllers/dashboardController');
+const { getDashboard, createPost, deletePost } = require('../controller/dashboardController');
 
 router.get('/', async (req, res) => {
   try {
