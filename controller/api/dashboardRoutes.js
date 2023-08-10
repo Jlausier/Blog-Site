@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
     const posts = await getDashboard(req.user.id); // Fetch user's posts
     // Render dashboard view with user's posts
-    res.render('dashboard', { posts });
+    res.render('all', { posts });
   } catch (error) {
     res.status(500).json(error);
   }

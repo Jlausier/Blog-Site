@@ -3,7 +3,15 @@ const { User } = require('../../models'); // Import your User model
 const router = require('express').Router();
 
 
+// Render the login page
+router.get('/login', (req, res) => {
+  res.render('login'); // Assuming 'login' is the name of your login.handlebars template
+});
 
+// Render the signup page
+router.get('/signup', (req, res) => {
+  res.render('signup'); // Assuming 'signup' is the name of your signup.handlebars template
+});
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
